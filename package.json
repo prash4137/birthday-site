@@ -1,0 +1,16 @@
+{
+  "name": "happybirthday",
+  "version": "1.0.0",
+  "description": "A password-protected birthday greeting site.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["birthday", "express", "vercel", "password-protection"],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-basic-auth": "^1.2.1"
+  }
+}
