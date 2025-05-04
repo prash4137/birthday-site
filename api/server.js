@@ -15,7 +15,13 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // Fallback to index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+  try {
+    res.sendFile(path.resolve(__dirname, '../public/index.html'));
+  } catch (error) {
+    console.error('Failed to serve index.html:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
+
 
 module.exports = app;
